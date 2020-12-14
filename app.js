@@ -53,10 +53,18 @@ const client = new Client({
 });
 
 client.on('message', msg => {
-  if (msg.body == '!ping') {
-    msg.reply('pong');
-  } else if (msg.body == 'good morning') {
+  if (msg.body == 'ping') {
+  msg.reply('Pong')};	
+   else if (msg.body == 'Cek') {
+    msg.reply('Aktif, tunggu balasan');
+  } else if (msg.body == 'Pagi') {
     msg.reply('selamat pagi');
+  } else if (msg.body == 'Siang') {
+    msg.reply('selamat siang');
+  } else if (msg.body == 'Malam') {
+    msg.reply('selamat malam');
+  } else if (msg.body == 'Sore') {
+    msg.reply('selamat sore');
   } else if (msg.body == '!groups') {
     client.getChats().then(chats => {
       const groups = chats.filter(chat => chat.isGroup);
